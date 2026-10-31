@@ -454,6 +454,50 @@ footer {
         transform: translateY(0);
     }
 }
+.heart-section {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.heart-container {
+    position: relative;
+    display: inline-block;
+    font-size: 100px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+}
+
+.heart-container:active {
+    transform: scale(0.90);
+}
+
+.heart-empty {
+    color: #ddd;
+}
+
+.heart-filled {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    line-height: 1.2;
+}
+
+#heartProgress {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e75480;
+}
+
+#heartMessage {
+    color: #e75480;
+    font-weight: bold;
+    margin-top: 10px;
+}
 #musicMessage {
     font-size: 13px;
     margin-top: 15px;
