@@ -278,3 +278,24 @@ Con muchísimo cariño, para ti, mi niña bonita. 🤍`;
 
     writeText();
 }
+let heartClicks = 0;
+const totalClicks = 10;
+
+function fillHeart() {
+    if (heartClicks >= totalClicks) return;
+
+    heartClicks++;
+
+    const percentage = heartClicks * 10;
+
+    document.getElementById("heartFilled").style.height =
+        percentage + "%";
+
+    document.getElementById("heartProgress").textContent =
+        percentage + "%";
+
+    if (heartClicks === totalClicks) {
+        document.getElementById("heartMessage").textContent =
+            "¡Mi corazón está completito gracias a ti! ❤️";
+    }
+}
